@@ -1,10 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html data-theme="dark">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 
     <title>Random Clock | Vanilla JS Projects</title>
@@ -22,8 +21,8 @@
         }
     </style>
 
-    <link rel="stylesheet" crossorigin href="../Dark Mode/pico.css">
-    <link rel="stylesheet" crossorigin href="./spacing.css">
+    <link rel="stylesheet" crossorigin href="../Dark Mode/pico.css" />
+    <link rel="stylesheet" crossorigin href="./spacing.css" />
 </head>
 
 <body class="container">
@@ -35,21 +34,31 @@
         <article>
             <div id="clock">
                 <p id="time"></p>
-
             </div>
         </article>
     </main>
 
     <script id="clock.js">
-        const clock = document.getElementById('clock');
-        const text = document.getElementById('time');
+        const clock = document.getElementById("clock");
+        const text = document.getElementById("time");
+
         const updateTime = () => {
             const currentTime = new Date();
             const timeString = currentTime.toLocaleTimeString();
-            text.textContent = timeString
+            // changing color
+            const r = Math.random() * 255;
+            const g = Math.random() * 255;
+            const b = Math.random() * 255;
+
+            // changing dimensions
+            const topOffset = Math.random() * 80;
+            const leftOffset = Math.random() * 80;
+            text.textContent = timeString;
+            text.setAttribute("style", `color: rgb(${r},${g},${b}) ;top: ${topOffset}%; left: ${leftOffset}%`);
         };
-        updateTime()
+        updateTime();
         setInterval(updateTime, 1000);
+        console.log(timeString);
     </script>
 </body>
 
