@@ -5,43 +5,43 @@ body.grid {
     text-align: center;
     grid-template-areas: "header" "main" "nav" "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: max-content 2fr 1fr max-content
+    grid-template-rows: max-content 2fr 1fr max-content;
 }
 
 @media (min-width: 768px) {
-    :root {
+     :root {
         --header-height: 3em;
-        --footer-height: 2em
+        --footer-height: 2em;
     }
     body.grid {
         height: 100vh;
         grid-template-areas: "header main" "nav main" "footer main";
         grid-template-columns: minmax(20%, 40%) 1fr;
-        grid-template-rows: min-content 1fr min-content
+        grid-template-rows: min-content 1fr min-content;
     }
     body>header {
         text-align: left;
-        padding-bottom: 0
+        padding-bottom: 0;
     }
     body>main {
         margin-top: var(--header-height);
-        margin-bottom: var(--footer-height)
+        margin-bottom: var(--footer-height);
     }
     body>footer {
-        padding-top: 0
+        padding-top: 0;
     }
 }
 
 body>header {
-    grid-area: header
+    grid-area: header;
 }
 
 header>h1 {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 body>nav {
-    grid-area: nav
+    grid-area: nav;
 }
 
 body>main {
@@ -49,7 +49,7 @@ body>main {
     padding-top: 0;
     padding-bottom: 0;
     align-self: center;
-    justify-self: center
+    justify-self: center;
 }
 
 body>footer {
@@ -58,28 +58,28 @@ body>footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 footer>* {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
-html[data-theme=dark] #darklight {
-    background-image: url(./darth.jpg)
+html[data-theme="dark"] #darklight {
+    background-image: url(./darth.jpg);
 }
 
-html[data-theme=light] #darklight {
-    background-image: url(./yoda.jpg)
+html[data-theme="light"] #darklight {
+    background-image: url(./yoda.jpg);
 }
 
 #darklight {
     min-height: 200px;
     background-color: transparent;
     background-size: contain;
-    background-position: center
+    background-position: center;
 }
 
 article>header {
-    padding-bottom: 0
+    padding-bottom: 0;
 }

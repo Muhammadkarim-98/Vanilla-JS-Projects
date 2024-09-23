@@ -1,16 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html data-theme="dark">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 
     <title>Dark Mode | Vanilla JS Projects</title>
 
-    <link rel="stylesheet" crossorigin href="pico.css">
-    <link rel="stylesheet" crossorigin href="darklight.css">
+    <link rel="stylesheet" crossorigin href="pico.css" />
+    <link rel="stylesheet" crossorigin href="darklight.css" />
 </head>
 
 <body class="container grid">
@@ -18,38 +17,35 @@
         <h1>dark mode</h1>
     </header>
 
-    <nav style="align-self:center;">
-
+    <nav style="align-self: center">
         <label>
-			<input type="checkbox" id="toggle" name="toggle" role="switch" checked>
-			Use dark mode
-		</label>
-
+        <input type="checkbox" id="toggle" name="toggle" role="switch" checked />
+        Use dark mode
+      </label>
     </nav>
 
     <main>
         <article>
-
-            <main id="darklight"></main>
-
+            <main id="darklight">DARKY</main>
         </article>
     </main>
 
-    <footer>
-
-
-    </footer>
+    <footer></footer>
     <script id="theme.js">
         const doc = document.documentElement;
 
         function toggleTheme() {
-            const currentTheme = doc.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            doc.setAttribute('data-theme', newTheme)
-        };
+            const valueDoc = doc.getAttribute("data-theme");
+            const darkLight = document.getElementById("darklight");
+            darkLight.textContent = valueDoc === "light" ? "L I G H T Y" : "D A R K Y";
+            // Changing theme color
+            const currentTheme = doc.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            doc.setAttribute("data-theme", newTheme);
+        }
 
-        const toggle = document.getElementById('toggle');
-        toggle.addEventListener('change', toggleTheme)
+        const toggle = document.getElementById("toggle");
+        toggle.addEventListener("change", toggleTheme);
     </script>
 </body>
 
